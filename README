@@ -1,0 +1,23 @@
+SimpleQueue v.1
+
+SimpleQueue is a jquery-based javascript image loading queue that allows you to control the order in which images are loaded. Images in the queue are loaded sequentially instead of in parallel. Why would you want to do this? Let's say that some images are more important than others... perhaps in a carousel or above the fold. In other words, you might want some images to appear as fast as possible while others can be loaded when the user's bandwidth permits.
+
+works with FF, Safari, Chrome, IE6, IE7, IE8
+
+
+@author Corey Szopinski | cszopinski@cpbgroup.com
+
+USAGE:
+var q1 = new SimpleQueue();
+q1.add('bigimage.jpg', 'alt image attribue', $('#div'));
+q1.add('bigimage2.jpg', 'alt image attribue', $('#div'));
+q1.start();
+
+
+CALLBACK:
+handleQueueFinished()  - fired when queue is complete
+
+Multiple queues can run on the same page, either in parallel or sequentially
+
+
+references: http://jqueryfordesigners.com/image-loading/
