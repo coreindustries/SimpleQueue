@@ -4,8 +4,10 @@ SimpleQueue is a jquery-based javascript image loading queue that allows you to 
 
 works with FF, Safari, Chrome, IE6, IE7, IE8
 
+One of the tricky bits of building an image queue, is successfully watching when each image is loaded. On many browsers, the .load event doesn't fire reliably when the image is in cache. In our case, we instantiate an Image() object, add the .load method, and then start loading the file. This reliably catches the load even on nearly all browsers (including IE6).
 
-@author Corey Szopinski | cszopinski@cpbgroup.com
+
+@author Corey Szopinski | corey@core-industries.com
 
 USAGE:
 var q1 = new SimpleQueue();
